@@ -40,7 +40,29 @@ class Book
   end
 
 
+  def self.all()
+      sql = "SELECT * FROM books"
+      results = SqlRunner.run( sql )
+      return results.map { |book| Book.new(book) }
+  end
 
+
+  def self.find(id)
+      sql = "SELECT * FROM books
+      WHERE id = $1"
+      values = [id]
+      results = SqlRunner.run(sql, values)
+      return Book.new(results.first)
+  end
+
+
+
+
+
+  def self.delete_all
+    sql = "DELETE FROM books"
+    SqlRunner.run( sql )
+  end
 
 
 
