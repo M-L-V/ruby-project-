@@ -1,4 +1,4 @@
-require_relative( "../models/book.rb" )
+require_relative( "../models/book.rb" )   
 require_relative( "../models/publisher.rb" )
 require("pry-byebug")
 
@@ -108,7 +108,7 @@ publisher1 = Publisher.new({
   "contact_details" => 01206256000
   })
 
-publisher1.save 
+publisher1.save
 
 publisher2 = Publisher.new({
   "name" => "HarperCollins",
