@@ -22,6 +22,6 @@ CREATE TABLE publishers
 (
   id SERIAL8 primary key,
   name VARCHAR(255) not null,
-  contact_details VARCHAR(255), 
+  contact_details INT2,
   book_id INT8 REFERENCES books(id)
 );

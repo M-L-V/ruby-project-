@@ -10,11 +10,11 @@ Publisher.delete_all()
 book1 = Book.new({
   "title" => "The Winds of Winter",
   "author" => "G R R Martin",
-  "description" => "Long-awaited fantasy novel set in Westeros",
+  "description" => "The long-awaited fantasy novel set in Westeros",
   "stock_quantity" => 10,
   "buying_cost" => 5,
   "selling_price" => 10 ,
-  "publisher_id" => publisher1.id ,
+  "publisher_id" => publisher2.id ,
 
   book1.save
 
@@ -22,11 +22,11 @@ book1 = Book.new({
 book2 = Book.new({
   "title" => "Northern Lights",
   "author" => "Philip Pullman",
-  "description" => "Beginning of the His Dark Materials trilogy ",
+  "description" => "The beginning of the His Dark Materials trilogy ",
   "stock_quantity" => 0,
   "buying_cost" => 6,
   "selling_price" => 10,
-  "publisher_id" => publisher2.id ,
+  "publisher_id" => publisher1.id ,
 
   book2.save
 
@@ -38,7 +38,7 @@ book3 = Book.new({
   "stock_quantity" => 10,
   "buying_cost" => 6,
   "selling_price" => 10,
-  "publisher_id" => publisher1.id ,
+  "publisher_id" => publisher2.id ,
 
   book3.save
 
@@ -70,11 +70,11 @@ book5 = Book.new({
 book6 = Book.new({
   "title" => "The Testaments",
   "author" => "Margaret Atwood",
-  "description" => "The long-awaited sequel to the Handmaid's Tale",
+  "description" => "The long-anticipated sequel to the Handmaid's Tale",
   "stock_quantity" => 4,
   "buying_cost" => 7,
   "selling_price" => 12,
-  "publisher_id" => publisher1.id ,
+  "publisher_id" => publisher3.id ,
 
   book6.save
 
@@ -86,7 +86,7 @@ book7 = Book.new({
   "stock_quantity" => 5,
   "buying_cost" => 7,
   "selling_price" => 10,
-  "publisher_id" => publisher1.id ,
+  "publisher_id" => publisher4.id ,
 
   book7.save
 
@@ -101,3 +101,34 @@ book8 = Book.new({
   "publisher_id" => publisher1.id ,
 
   book8.save
+
+
+publisher1 = Publisher.new({
+  "name" => "Penguin Books",
+  "contact_details" => 01206256000
+  })
+
+publisher1.save 
+
+publisher2 = Publisher.new({
+  "name" => "HarperCollins",
+  "contact_details" => 01413063100
+  })
+
+publisher2.save
+
+publisher3 = Publisher.new({
+  "name" => "Vintage Publishing",
+  "contact_details" => 01206256001
+  })
+
+
+publisher3.save
+
+
+publisher4 = Publisher.new({
+  "name" => "Zaffre Publishing",
+  "contact_details" => 02074903875
+  })
+
+publisher4.save
