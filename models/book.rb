@@ -1,14 +1,15 @@
 require_relative( '../db/sql_runner' )
 
+
 class Book
 
-  attr_reader( :id, :title, :author, :description, :stock_quantity,
-    :buying_cost, :selling_price, :publisher_id)
+  attr_reader( :title, :author, :description, :stock_quantity,
+    :buying_cost, :selling_price, :publisher_id, :id)
 
   def initialize( options )
     @id = options["id"].to_i if options["id"]
-    @title = options['title']
-    @author = options['author']
+    @title = options["title"]
+    @author = options["author"]
     @description = options["description"]
     @stock_quantity = options["stock_quantity"].to_i
     @buying_cost = options["buying_cost"].to_f
@@ -47,15 +48,6 @@ class Book
     results = SqlRunner.run(sql, values)
     return Publisher.new(results.first)
   end
-
-
-
-
-
-
-
-
-
 
 
   def self.all()
