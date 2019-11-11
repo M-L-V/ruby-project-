@@ -40,6 +40,24 @@ class Book
   end
 
 
+  def publisher()
+    sql = "SELECT * FROM publisher
+    WHERE id = $1"
+    values = [@publisher_id]
+    results = SqlRunner.run(sql, values)
+    return Publisher.new(results.first)
+  end
+
+
+
+
+
+
+
+
+
+
+
   def self.all()
       sql = "SELECT * FROM books"
       results = SqlRunner.run( sql )
