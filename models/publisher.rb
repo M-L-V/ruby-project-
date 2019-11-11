@@ -29,6 +29,29 @@ class Publisher
   end
 
 
+  def update()
+    sql = "UPDATE publishers
+    SET
+    (
+      name,
+      contact_details
+    ) =
+    (
+      $1, $2
+    )
+    WHERE id = $3"
+    values = [@name, @contact_details, @id]
+    SqlRunner.run(sql, values)
+  end
+
+
+  def delete()
+    sql = "DELETE FROM publishers
+    WHERE id = $1"
+    values = [@id]
+    SqlRunner.run(sql, values)
+  end
+
 
   def self.all()
       sql = "SELECT * FROM publishers"

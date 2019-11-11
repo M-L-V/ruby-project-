@@ -41,6 +41,37 @@ class Book
   end
 
 
+
+  def update()
+    sql = "UPDATE books
+    SET
+    (
+      title,
+      author,
+      description,
+      stock_quantity,
+      buying_cost,
+      selling_price,
+      publisher_id
+    ) =
+    (
+      $1, $2, $3, $4, $5, $6, $7
+    )
+    WHERE id = $8"
+    values = [@title, @author, @description, @stock_quantity,
+    @buying_cost, @selling_price, @publisher_id, @id]
+    SqlRunner.run(sql, values)
+  end
+
+
+  def delete()
+    sql = "DELETE FROM books
+    WHERE id = $1"
+    values = [@id]
+    SqlRunner.run(sql, values)
+  end
+
+
   def publisher()
     sql = "SELECT * FROM publisher
     WHERE id = $1"
