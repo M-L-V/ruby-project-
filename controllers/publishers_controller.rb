@@ -5,3 +5,21 @@ require_relative('../models/publisher.rb')
 require_relative('../models/book.rb')
 
 also_reload('../models/*')
+
+
+get '/publishers' do
+  @publishers = Publisher.all
+  erb(:'publishers/index')
+end
+
+
+get '/publishers/new' do
+  @publishers = Publisher.all
+  erb(:'publishers/new')
+end
+
+
+get '/publishers/:id' do
+  @publisher = Publisher.find(params['id'].to_i)
+  erb(:'publishers/show')
+end
