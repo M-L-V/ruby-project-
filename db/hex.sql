@@ -1,5 +1,16 @@
-DROP TABLE publishers;
 DROP TABLE books;
+DROP TABLE publishers;
+
+
+
+
+CREATE TABLE publishers
+(
+  id SERIAL8 primary key,
+  name VARCHAR(255) not null,
+  contact_details VARCHAR(255)
+);
+
 
 
 CREATE TABLE books
@@ -12,12 +23,4 @@ CREATE TABLE books
   buying_cost FLOAT,
   selling_price FLOAT,
   publisher_id INT8 REFERENCES publishers(id)
-);
-
-
-CREATE TABLE publishers
-(
-  id SERIAL8 primary key,
-  name VARCHAR(255) not null,
-  contact_details INT2
 );

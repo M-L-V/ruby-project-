@@ -11,9 +11,9 @@ class Book
     @author = options['author']
     @description = options["description"]
     @stock_quantity = options["stock_quantity"].to_i
-    @buying_cost = options["buying_cost"].to_i
-    @selling_price = options["selling_price"]to_i
-    @publisher_id = options["publisher_id"].to_i
+    @buying_cost = options["buying_cost"].to_f
+    @selling_price = options["selling_price"].to_f
+    @publisher_id = options["publisher_id"]
   end
 
 
@@ -54,9 +54,6 @@ class Book
       results = SqlRunner.run(sql, values)
       return Book.new(results.first)
   end
-
-
-
 
 
   def self.delete_all
