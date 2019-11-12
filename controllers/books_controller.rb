@@ -15,12 +15,28 @@ end
 
 
 get '/books/new' do
-  @books = Book.all
   erb(:'books/new')
 end
 
+post '/books' do # create
+  @book = Book.new( params )
+  @book.save()
+  erb(:'books/create')
+end
 
 get '/books/:id' do
   @book = Book.find(params['id'].to_i)
   erb(:'books/show')
+end
+
+
+post '/books/:id' do # update
+  Book.new(params).update
+  redirect to '/books'
+end
+
+post '/books/:id/delete' do # delete
+  book = Book.find(params[:id])
+  book.delete()
+  redirect to '/books'
 end
