@@ -7,7 +7,7 @@
   id="title-field"
   value="<%= @book.title %>"
   />
-
+<p>
   <label for="author-field">Author:</label>
   <input
   type="text"
@@ -15,15 +15,7 @@
   id="author-field"
   value="<%= @book.author %>"
   />
-
-  <label for="description-field">Description:</label>
-  <input
-  type="text"
-  name="description"
-  id="description-field"
-  value="<%= @book.description %>"
-  />
-
+<p>
   <label for="stock_quantity-field">Stock Quantity:</label>
   <input
   type="INT2"
@@ -31,6 +23,7 @@
   id="stock_quantity-field"
   value="<%= @book.stock_quantity %>"
   />
+<p>
   <label for="buying_cost-field">Cost to Buy:</label>
   <input
   type="FLOAT"
@@ -38,7 +31,7 @@
   id="buying_cost-field"
   value="<%= @book.buying_cost %>"
   />
-
+<p> 
   <label for="selling_price-field">Selling Price:</label>
   <input
   type="INT2"
