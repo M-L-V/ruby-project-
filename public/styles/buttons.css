@@ -1,0 +1,28 @@
+.btn {
+  border:0px none;
+  border-radius: 3%;
+  padding: 8px 12px;
+  color: darkcyan;
+  cursor:pointer;
+  font-family: 'Arial', sans-serif;
+}
+
+.btn--success {
+  background-color: black;
+}
+
+.btn--success:hover {
+  background-color: darkcyan;
+}
+
+.btn--action:hover {
+  background-color: white;
+}
+
+.btn--action {
+  background-color: white;
+}
+
+.btn--wrapper {
+  margin: 0px 0px 30px 0px;
+}
