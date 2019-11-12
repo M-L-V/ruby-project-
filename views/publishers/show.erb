@@ -1,0 +1,7 @@
+<p>Name: <%= @publisher.name %></p>
+<p>Contact Details: <%= @publisher.contact_details %></p>
+
+
+<form method="post" action="/publishers/<%= @publisher.id %>/delete">
+  <input type="submit" value="Delete Publisher"/>
+</form>
