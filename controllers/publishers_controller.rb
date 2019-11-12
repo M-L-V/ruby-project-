@@ -21,26 +21,25 @@ end
 post '/publishers' do # create
   @publisher = Publisher.new(params)
   @publisher.save()
-  erb(:'publisher/create')
+  erb(:'publishers/create')
 end
 
 get '/publisher/:id' do
   @publisher = Publisher.find(params['id'].to_i)
-  erb(:'publisher/show')
+  erb(:'publishers/show')
 end
 
 
-post '/publisher/:id' do # update
+post '/publishers/:id' do # update
   Publisher.new(params).update
-  redirect to '/publisher'
+  redirect to '/publishers'
 end
 
-post '/publisher/:id/delete' do # delete
+post '/publishers/:id/delete' do # delete
   publisher = Publisher.find(params[:id])
   publisher.delete()
-  redirect to '/publisher'
+  redirect to '/publishers'
 end
-
 
 
 get '/publishers/:id' do
