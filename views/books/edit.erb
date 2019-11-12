@@ -16,6 +16,14 @@
   value="<%= @book.author %>"
   />
 <p>
+  <label for="description-field">Description :</label>
+  <input
+  type="text"
+  name="description"
+  id="description-field"
+  value="<%= @book.description %>"
+    />
+<p>
   <label for="stock_quantity-field">Stock Quantity:</label>
   <input
   type="INT2"
@@ -31,13 +39,21 @@
   id="buying_cost-field"
   value="<%= @book.buying_cost %>"
   />
-<p> 
+<p>
   <label for="selling_price-field">Selling Price:</label>
   <input
   type="INT2"
   name="selling_price"
   id="selling_price-field"
   value="<%= @book.selling_price %>"
+  />
+<p> 
+  <label for="publisher_id-field">Published by:</label>
+  <input
+  type="text"
+  name="publisher_id"
+  id = "publisher_id-field"
+  value="<%= @book.publisher_id %> "
   />
 
 <input class="btn btn--action" type='submit' value="Edit Book">

@@ -60,6 +60,7 @@ class Publisher
   end
 
 
+
   def self.find(id)
     sql = "SELECT * FROM publishers
     WHERE id = $1"
@@ -73,14 +74,6 @@ class Publisher
     sql = "DELETE FROM publishers"
     SqlRunner.run(sql)
   end
-
-
-
-
-
-
-
-
 
 
 
