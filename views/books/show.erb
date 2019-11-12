@@ -5,6 +5,9 @@
 <p> Buying Cost: <%= @book.buying_cost %></p>
 <p> Selling Price: <%= @book.selling_price %></p>
 
+<p><a href="/books/<%= @book.id %>/edit">Edit Book Details </a></p>
+
+
 
 <form method="post" action="/books/<%= @book.id %>/delete">
   <input type="submit" value="Delete Book"/>

@@ -24,10 +24,18 @@ post '/publishers' do # create
   erb(:'publishers/create')
 end
 
-get '/publisher/:id' do
+get '/publishers/:id' do
   @publisher = Publisher.find(params['id'].to_i)
   erb(:'publishers/show')
 end
+
+
+
+get '/publishers/:id/edit' do # edit
+  @publisher = Publisher.find( params[:id] )
+  erb(:'publishers/edit')
+end
+
 
 
 post '/publishers/:id' do # update

@@ -1,0 +1,51 @@
+<form method="post" action="/books/<%= @book.id %>">
+
+  <label for="title-field">Title:</label>
+  <input
+  type="text"
+  name="title"
+  id="title-field"
+  value="<%= @book.title %>"
+  />
+
+  <label for="author-field">Author:</label>
+  <input
+  type="text"
+  name="author"
+  id="author-field"
+  value="<%= @book.author %>"
+  />
+
+  <label for="description-field">Description:</label>
+  <input
+  type="text"
+  name="description"
+  id="description-field"
+  value="<%= @book.description %>"
+  />
+
+  <label for="stock_quantity-field">Stock Quantity:</label>
+  <input
+  type="INT2"
+  name="stock_quantity"
+  id="stock_quantity-field"
+  value="<%= @book.stock_quantity %>"
+  />
+  <label for="buying_cost-field">Cost to Buy:</label>
+  <input
+  type="FLOAT"
+  name="buying_cost"
+  id="buying_cost-field"
+  value="<%= @book.buying_cost %>"
+  />
+
+  <label for="selling_price-field">Selling Price:</label>
+  <input
+  type="INT2"
+  name="selling_price"
+  id="selling_price-field"
+  value="<%= @book.selling_price %>"
+  />
+
+  <input type='submit' value="Edit Book">
+</form>
