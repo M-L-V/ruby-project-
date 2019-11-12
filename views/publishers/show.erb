@@ -2,6 +2,9 @@
 <p>Contact Details: <%= @publisher.contact_details %></p>
 
 
+<p><a href="/publishers/<%= @publisher.id %>/edit">Edit Publisher Details </a></p>
+
+
 <form method="post" action="/publishers/<%= @publisher.id %>/delete">
   <input type="submit" value="Delete Publisher"/>
 </form>
