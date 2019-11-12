@@ -23,7 +23,13 @@
     <td></td>
     <td><%= book.description %></td>
     <td></td>
+    <% if book.stock_quantity > 50 %>
     <td><%= book.stock_quantity %></td>
+    <% elsif book.stock_quantity == 0 %>
+    <td><font color="#ff0000">OUT OF STOCK</font></td>
+    <% else %>
+    <td><font color="#ffa500"><%= book.stock_quantity %></font></td>
+    <% end %>
     <td></td>
     <td><%= book.buying_cost %></td>
     <td></td>
