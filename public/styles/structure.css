@@ -1,6 +1,7 @@
 body {
   background:url('/images/background_image.jpg');
   background-size: 100%;
+  opacity: 75%;
   background-repeat: no-repeat;
   color: darkcyan;
   font-family: 'Arial', serif;
@@ -8,18 +9,14 @@ body {
   margin: 0px;
 }
 
+
+
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Arial', serif;
   margin: 0px;
   padding: 0px;
 }
 
-/* h1 {
-  font-size: 1.8em;
-  background-color: white;
-  margin-bottom: 20px;
-  padding: 0px;
-} */
 
 .bookInfo {
   position: relative;
@@ -72,7 +69,7 @@ a:link {
 
 a:visited {
   text-decoration: none;
-  color: black;
+  color: darkcyan;
 }
 
 .active {
