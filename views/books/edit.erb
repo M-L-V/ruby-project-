@@ -47,14 +47,13 @@
   id="selling_price-field"
   value="<%= @book.selling_price %>"
   />
-<p> 
+<p>
   <label for="publisher_id-field">Published by:</label>
-  <input
-  type="text"
-  name="publisher_id"
-  id = "publisher_id-field"
-  value="<%= @book.publisher_id %> "
-  />
+  <select name="publisher_id">
+    <% for publisher in @publishers %>
+    <option value="<%= publisher.id %>"><%= publisher.name %></option>
+    <% end %>
+  </select>
 
 <input class="btn btn--action" type='submit' value="Edit Book">
 

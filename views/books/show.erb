@@ -6,7 +6,8 @@
   <p> Stock Quantity: <%= @book.stock_quantity %></p>
   <p> Buying Cost: <%= @book.buying_cost %></p>
   <p> Selling Price: <%= @book.selling_price %></p>
-  <p> Published by: <%= @book.publisher_id %> </p> 
+  <% @publisher = Publisher.find(@book.publisher_id) %>
+  <p> Published by: <%= @publisher.name %> </p>
 
   <p><a href="/books/<%= @book.id %>/edit">Edit Book Details </a></p>
 

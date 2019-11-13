@@ -39,14 +39,12 @@
     <td></td>
     <td><%= book.selling_price %></td>
     <td></td>
-    <td><%= book.publisher_id %></td>
+    <% @publisher = Publisher.find(book.publisher_id) %>
+    <td><a href="/publishers/<%= @publisher.id %>"><%= @publisher.name %></a></td>
     </ol>
 
 
   </tr>
-
-
-
 
 
 

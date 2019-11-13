@@ -15,6 +15,7 @@ end
 
 
 get '/books/new' do
+  @publishers = Publisher.all()
   erb(:'books/new')
 end
 
@@ -26,12 +27,14 @@ end
 
 get '/books/:id' do
   @book = Book.find(params['id'].to_i)
+  @publishers = Publisher.all()
   erb(:'books/show')
 end
 
 
 get '/books/:id/edit' do # edit
   @book = Book.find(params[:id])
+  @publishers = Publisher.all()
   erb(:'books/edit')
 end
 

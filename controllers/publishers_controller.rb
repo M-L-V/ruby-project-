@@ -26,6 +26,7 @@ end
 
 get '/publishers/:id' do
   @publisher = Publisher.find(params['id'].to_i)
+  @books = Book.all 
   erb(:'publishers/show')
 end
 
