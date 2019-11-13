@@ -4,7 +4,7 @@
 <p>Name: <%= @publisher.name %></p>
 <p>Contact Details: <%= @publisher.contact_details %></p>
 
-<h3>Books: </h3>
+<p>Books: </p>
 <% for book in @books %>
   <% if book.publisher_id.to_i == @publisher.id %>
   <p><a href="/books/<%= book.id %>"><%= book.title %></a></p>
@@ -15,7 +15,7 @@
 
 
 
-<p><a href="/publishers/<%= @publisher.id %>/edit">Edit Publisher Details </a></p>
+<h3><a href="/publishers/<%= @publisher.id %>/edit">Edit Publisher Details </a></h3>
 
 
 <form method="post" action="/publishers/<%= @publisher.id %>/delete">
