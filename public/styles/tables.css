@@ -1,5 +1,12 @@
-td, th {
+
+
+table {
+  border-collapse: collapse;
+}
+
+table, th, td {
   text-align: center;
+  border: 4px solid black;
 }
 
 td {
@@ -8,12 +15,7 @@ td {
 
 th {
   padding: 0px 20px 10px 0px;
-  border-bottom: 1px solid darkcyan;
+  border: 1px solid darkcyan;
   background-color: darkcyan;
   color: white;
-}
-
-
-table {
-  border-collapse: collapse;
 }

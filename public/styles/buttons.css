@@ -2,25 +2,25 @@
   border:0px none;
   border-radius: 3%;
   padding: 8px 12px;
-  color: darkcyan;
+  color: black;
   cursor:pointer;
   font-family: 'Arial', sans-serif;
 }
 
 .btn--success {
-  background-color: black;
+  background-color: lemonchiffon;
 }
 
 .btn--success:hover {
-  background-color: darkcyan;
+  background-color: lemonchiffon;
 }
 
 .btn--action:hover {
-  background-color: white;
+  background-color: darkcyan;
 }
 
 .btn--action {
-  background-color: white;
+  background-color: lemonchiffon;
 }
 
 .btn--wrapper {
