@@ -1,6 +1,7 @@
 require_relative( '../db/sql_runner' )
 
 
+
 class Book
 
   attr_reader( :title, :author, :description, :stock_quantity,
@@ -99,8 +100,19 @@ class Book
 
   def self.delete_all
     sql = "DELETE FROM books"
-    SqlRunner.run( sql )
+    SqlRunner.run(sql)
   end
+
+
+  def self.markup()
+    profit = @selling_price.to_f - @buying_cost.to_f
+    markup_amount = (profit/@buying_cost.to_f) * 100
+    return markup_amount.round(2)
+  end
+
+
+
+
 
 
 

@@ -1,5 +1,5 @@
 body {
-  background:url('/images/background_image.jpg');
+  /* background:url('/images/background_image.jpg');   */
   background-size: 100%;
   background-repeat: no-repeat;
   color: darkcyan;
@@ -18,4 +18,26 @@ h1 {
   font-size: 1.8em;
   background-color: white;
   margin-bottom: 20px;
-  padding: 0px; }
+  padding: 0px;
+}
+
+.bookInfo {
+  position: relative;
+  align-content: center;
+  border-radius: 20%;
+  border: solid black;
+  width: 50%;
+  text-align: center;
+  left: 25%;
+  margin-top: 10%;
+}
+
+nav ul{
+  height: 100%;
+  width: 5%;
+  position: relative;
+  top: 0;
+  left: 2;
+  border: solid black;
+  text-align: center;
+}
