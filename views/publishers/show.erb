@@ -1,4 +1,4 @@
-<div class="publisherInfo">
+<div class="info-page">
 
 
 <p>Name: <%= @publisher.name %></p>
@@ -15,9 +15,10 @@
 
 
 
-<h3><a href="/publishers/<%= @publisher.id %>/edit">Edit Publisher Details </a></h3>
+<h3><a href="/publishers/<%= @publisher.id %>/edit" value="edit-button" class="edit-button">Edit Publisher Details </a></h3>
 
 
 <form method="post" action="/publishers/<%= @publisher.id %>/delete">
-  <input type="submit" value="Delete Publisher"/>
+  <input type="submit" class="delete-button" value="Delete Publisher"/>
 </form>
+</div>

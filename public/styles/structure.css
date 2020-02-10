@@ -1,7 +1,8 @@
 body {
-  background:url('/images/background_image.jpg');
+  /* background:url('/images/background_image.jpg'); */
   background-size: 100%;
-  opacity: 75%;
+  background-color: #f4f4ed;
+  opacity: 100%;
   background-repeat: no-repeat;
   color: darkcyan;
   font-family: 'Arial', serif;
@@ -11,26 +12,20 @@ body {
 
 
 
-h1, h2, h3, h4, h5, h6 {
+h2, h3, h4, h5, h6 {
   font-family: 'Arial', serif;
   margin: 0px;
   padding: 0px;
 }
 
-
-.bookInfo {
-  position: relative;
-  align-content: center;
-  border-radius: 20%;
-  border: solid black;
-  width: 50%;
-  text-align: center;
-  left: 25%;
-  margin-top: 10%;
-  background-color: lemonchiffon;
+h1 {
+    font-family: 'Arial', serif;
+    margin: 24px;
+    padding: 0px;
 }
 
-.publisherInfo {
+
+/* .bookInfo-table {
   position: relative;
   align-content: center;
   border-radius: 20%;
@@ -40,10 +35,38 @@ h1, h2, h3, h4, h5, h6 {
   left: 25%;
   margin-top: 10%;
   background-color: lemonchiffon;
+} */
+
+.info-page{
+position: relative;
+align-content: center;
+border-radius: 20%;
+border: solid black;
+width: 50%;
+text-align: center;
+left: 25%;
+margin-top: 10%;
+background-color: lemonchiffon;
 }
 
 
 ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background-color: lemonchiffon;
+}
+
+.front-page-books-button{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background-color: lemonchiffon;
+}
+
+.front-page-publishers-button{
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -69,14 +92,14 @@ a:link {
 
 a:visited {
   text-decoration: none;
-  color: darkcyan;
+  color: black;
 }
 
 .active {
   background-color: darkcyan;
   color: white;
 }
-
+/*
 
 .background_image {
   position: fixed;
@@ -88,7 +111,7 @@ a:visited {
   top: 0;
   left: 0;
   z-index: -1;
-}
+} */
 
 
 ul {
@@ -98,4 +121,26 @@ ul {
 li {
   text-align: center;
   border-bottom: 1px solid #555;
+}
+
+/* PUBLISHER DESIGN  */
+
+.page-name{
+  font-family: 'Arial', serif;
+  margin: 16px;
+  padding: 0px;
+}
+
+
+
+.publisherInfo {
+  position: relative;
+  align-content: center;
+  border-radius: 20%;
+  border: solid black;
+  width: 50%;
+  text-align: center;
+  left: 25%;
+  margin-top: 10%;
+  background-color: lemonchiffon;
 }

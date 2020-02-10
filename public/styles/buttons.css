@@ -1,11 +1,11 @@
-.btn {
+/* .btn {
   border:0px none;
   border-radius: 3%;
   padding: 8px 12px;
   color: black;
   cursor:pointer;
   font-family: 'Arial', sans-serif;
-}
+} */
 
 .btn--success {
   background-color: lemonchiffon;
@@ -17,11 +17,56 @@
 
 .btn--action:hover {
   background-color: darkcyan;
+  order:0px none;
+  border-radius: 3%;
+  padding: 8px 12px;
+  color: black;
+  cursor:pointer;
+  font-family: 'Arial', sans-serif;
 }
 
 .btn--action {
   background-color: lemonchiffon;
+  order:0px none;
+  border-radius: 3%;
+  padding: 8px 12px;
+  color: black;
+  cursor:pointer;
+  font-family: 'Arial', sans-serif;
 }
+
+
+.add-new-button {
+  background-color: lemonchiffon;
+  order:0px none;
+  border-radius: 3%;
+  padding: 8px 12px;
+  color: black;
+  cursor:pointer;
+  font-family: 'Arial', sans-serif;
+}
+
+.edit-button{
+  background-color: darkcyan;
+  order:0px none;
+  border-radius: 3%;
+  padding: 8px 12px;
+  color: black;
+  cursor:pointer;
+  font-family: 'Arial', sans-serif;
+}
+
+.delete-button{
+  background-color: red;
+  order:0px none;
+  border-radius: 3%;
+  padding: 8px 12px;
+  color: black;
+  cursor:pointer;
+  font-family: 'Arial', sans-serif;
+}
+
+
 
 .btn--wrapper {
   margin: 0px 0px 30px 0px;

@@ -1,6 +1,6 @@
-<h1> Publishers </h1>
+<h1 class="page-name"> Publishers </h1>
 
-<table bgcolor="lemonchiffon">
+<table bgcolor="lemonchiffon" class="publisher-info-table">
   <tr>
     <th>Name</th>
     <th></th>
@@ -9,12 +9,12 @@
   <% for publisher in @publishers %>
   <tr>
     <td><a href="/publishers/<%= publisher.id %>"><%= publisher.name %></a></td>
-    <td>|</td>
+    <td></td>
     <td><%= publisher.contact_details %></td>
   </tr>
 
   <% end %>
 
 
-  <p><a href="/publishers/new">Add New Publisher </a></p>
+  <p><a href="/publishers/new" class="add-new-button">Add New Publisher </a></p>
 </table>

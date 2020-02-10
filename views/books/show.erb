@@ -1,5 +1,5 @@
 
-<div class="bookInfo">
+<div class="info-page">
   <p>Title: <%= @book.title %></p>
   <p>Author: <%= @book.author %></p>
   <p>Description: <%= @book.description%></p>
@@ -11,11 +11,11 @@
 
 
 
-  <h3><a href="/books/<%= @book.id %>/edit">Edit Book Details </a></h3>
+  <h3><a href="/books/<%= @book.id %>/edit" class="edit-button">Edit Book Details </a></h3>
 
 
 
   <form method="post" action="/books/<%= @book.id %>/delete">
-    <input type="submit" value="Delete Book"/>
+    <input type="submit" class="delete-button" value="Delete Book"/>
   </form>
-</div>
+  </div>
